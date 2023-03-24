@@ -1,0 +1,2 @@
+### Learning React
+I'm using this project so I can better my react skills, where I'll learn how to properly manage API calls in a SPA website. I was halfway done once with javascript vanilla, but decided to learn react midway, so this will be my second project.
