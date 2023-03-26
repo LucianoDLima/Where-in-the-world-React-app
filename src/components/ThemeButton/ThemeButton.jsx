@@ -8,13 +8,13 @@ const ThemeButton = () => {
 
   // Toggle button for theme change
   const toggleTheme = () => {
-    setTheme(theme === 'light-mode' ? '' : 'light-mode')
+    setTheme(theme ? '' : 'light-mode')
   }
 
   return (
     <div className={`theme-container`} onClick={toggleTheme}>
-      <img src={theme !== 'light-mode' ? lightModeIcon : darkModeIcon} alt={theme ? 'Light mode icon' : 'Dark mode icon'}/>
-      <p>{theme !== 'light-mode' ? 'Dark mode' : 'Light mode'}</p>
+      <img src={!theme ? lightModeIcon : darkModeIcon} alt={theme ? 'Light mode icon' : 'Dark mode icon'}/>
+      <p>{!theme ? 'Dark mode' : 'Light mode'}</p>
     </div>
   )
 }

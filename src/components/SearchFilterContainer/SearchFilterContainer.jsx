@@ -6,9 +6,9 @@ import SearchBar from './SearchBar/SearchBar'
 const SearchFilterContainer = () => {
   const { theme } = useContext(ThemeContext)
   return (
-    <section className={`search-filter-container ${theme ? '' : 'light-mode'}`}>
+    <section className={`search-filter-container`}>
       <SearchBar />
-      {/* <Filter /> */}
+      <Filter />
     </section>
   )
 }

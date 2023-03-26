@@ -1,15 +1,12 @@
 @use '../../styles/spacing' as spacing;
+@forward './SearchBar/searchBar';
+@forward './Filter/filter.scss';
 
 .search-filter-container {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(61, 61, 61);
   width: 100%;
   margin-inline: auto;
   padding-inline: spacing.$max-width-padding;
 
 }
-
-// .search-filter-container.light-mode {
-
-// }

@@ -1,0 +1,49 @@
+@use '../../../styles/spacing' as spacing;
+@use '../../../styles/colors' as color;
+@use '../../../styles/typography' as font;
+
+@mixin filter-center($left-or-right) {
+  position: absolute;
+  pointer-events: none;
+  top: 50%;
+  transform: translateY(-50%);
+  #{$left-or-right}: spacing.$min-padding-400;
+}
+
+.filter-container {
+  position: relative;
+  max-width: 12.5rem;
+  
+
+  .filter-title {
+    font-size: font.$fs--100;
+    @include filter-center(left);
+  }
+
+  .filter-arrow-icon {
+    @include filter-center(right);
+
+    .active {
+      transform: rotate(-180deg);
+    }
+  }
+
+  select {
+    width: 12.5rem;
+    height: 100%;
+    border: none;
+    padding-left: spacing.$min-padding-100;
+    box-shadow: 0px 0px 15px color.$dm-box-shadow-color;
+    border-radius: spacing.$br--200;
+    font-weight: font.$fw-100;
+    background-color: color.$dm-bg-secondary;
+    color: color.$dm-text-main;
+    appearance: none;
+    cursor: pointer;
+  }
+}
+
+.filter-container.light-mode > * {
+  background-color: color.$lm-bg-secondary;
+  color: color.$lm-text-main;
+}

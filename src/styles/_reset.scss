@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
-input {
+input,
+select {
   font-family: inherit;
+  color: inherit;
 }

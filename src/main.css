@@ -5,8 +5,10 @@
   box-sizing: border-box;
 }
 
-input {
+input,
+select {
   font-family: inherit;
+  color: inherit;
 }
 
 body {
@@ -54,15 +56,6 @@ header.light-mode {
   color: hsl(200deg, 15%, 8%);
 }
 
-.search-filter-container {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(61, 61, 61);
-  width: 100%;
-  margin-inline: auto;
-  padding-inline: 5rem;
-}
-
 .search-bar {
   position: relative;
   max-width: 30rem;
@@ -88,6 +81,55 @@ header.light-mode {
 .search-bar.light-mode input {
   background-color: hsl(0deg, 0%, 100%);
   color: hsl(200deg, 15%, 8%);
+}
+
+.filter-container {
+  position: relative;
+  max-width: 12.5rem;
+}
+.filter-container .filter-title {
+  font-size: 0.875rem;
+  position: absolute;
+  pointer-events: none;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1.45rem;
+}
+.filter-container .filter-arrow-icon {
+  position: absolute;
+  pointer-events: none;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.45rem;
+}
+.filter-container .filter-arrow-icon .active {
+  transform: rotate(-180deg);
+}
+.filter-container select {
+  width: 12.5rem;
+  height: 100%;
+  border: none;
+  padding-left: 1.15rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  font-weight: 600;
+  background-color: hsl(209deg, 23%, 22%);
+  color: hsl(0deg, 0%, 100%);
+  appearance: none;
+  cursor: pointer;
+}
+
+.filter-container.light-mode > * {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(200deg, 15%, 8%);
+}
+
+.search-filter-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 5rem;
 }
 
 /*# sourceMappingURL=main.css.map */
