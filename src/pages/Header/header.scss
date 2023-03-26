@@ -1,5 +1,6 @@
 @use '../../styles/colors.scss' as color;
 @use '../../styles/spacing.scss' as spacing;
+@use '../../styles/typography.scss' as font;
 @use '../../components/ThemeButton/themeButton.scss';
 
 header {
@@ -13,8 +14,8 @@ header {
   margin-bottom: 3rem;
 
   h1 {
-    font-weight: 800;
-    font-size: 1.5rem;
+    font-weight: font.$fw-200;
+    font-size: font.$fs-500;
   }
 
 

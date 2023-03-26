@@ -1,0 +1,36 @@
+@use '../../../styles/spacing' as spacing;
+@use '../../../styles/colors' as color;
+@use '../../../styles/typography' as font;
+
+.search-bar {
+  position: relative;
+  max-width: 30rem;
+  width: 100%;
+
+  label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: spacing.$min-padding-900;
+    display: flex;
+
+  }
+
+  input {
+    width: 100%;
+    border: none;
+    font-weight: font.$fw-100;
+    border-radius: spacing.$br--100;
+    padding: spacing.$min-padding-100 75px;
+    background-color: color.$dm-bg-secondary;
+    color: color.$dm-text-main;
+    
+  }
+}
+
+.search-bar.light-mode {
+  input {
+    background-color: color.$lm-bg-secondary;
+    color: color.$lm-text-main;
+  }
+}

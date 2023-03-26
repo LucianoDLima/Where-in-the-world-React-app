@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+input {
+  font-family: inherit;
+}
+
 body {
   background-color: hsl(207deg, 26%, 17%);
   color: hsl(0deg, 0%, 100%);
@@ -46,6 +50,42 @@ header h1 {
 }
 
 header.light-mode {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(200deg, 15%, 8%);
+}
+
+.search-filter-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(61, 61, 61);
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 5rem;
+}
+
+.search-bar {
+  position: relative;
+  max-width: 30rem;
+  width: 100%;
+}
+.search-bar label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2rem;
+  display: flex;
+}
+.search-bar input {
+  width: 100%;
+  border: none;
+  font-weight: 600;
+  border-radius: 0.15rem;
+  padding: 1.15rem 75px;
+  background-color: hsl(209deg, 23%, 22%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+.search-bar.light-mode input {
   background-color: hsl(0deg, 0%, 100%);
   color: hsl(200deg, 15%, 8%);
 }
