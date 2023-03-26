@@ -1,0 +1,15 @@
+@use '../../styles/colors.scss' as color;
+@use '../../styles/typography.scss' as typography;
+
+body {
+  background-color: color.$dm-bg-main;
+  color: color.$dm-text-main;
+  font-family: typography.$fm-main, sans-serif;
+  height: 120vh;
+
+}
+
+body.light-mode {
+  background-color: color.$lm-bg-main;
+  color: color.$lm-text-main;
+}

@@ -1,0 +1,15 @@
+.theme-container {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  cursor: pointer;
+
+  img {
+    width: 1rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+  }
+}
+

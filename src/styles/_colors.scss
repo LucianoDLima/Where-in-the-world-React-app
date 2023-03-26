@@ -1,0 +1,22 @@
+// Colors
+$dark-blue-000: hsl(209, 23%, 22%);
+$dark-blue-100: hsl(207, 26%, 17%);
+$dark-blue-200: hsl(200, 15%, 8%);
+$dark-gray: hsl(0, 0%, 52%);
+$light-gray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+$dark-100: rgba(0, 0, 0, 0.15);
+
+
+// Dark Mode
+$dm-bg-main: $dark-blue-100;
+$dm-bg-secondary: $dark-blue-000;
+$dm-text-main: $white;
+
+// Light mode
+$lm-bg-main: $light-gray;
+$lm-bg-secondary: $white;
+$lm-text-main: $dark-blue-200;
+
+// Shadow box
+$dm-box-shadow-color: $dark-100;
