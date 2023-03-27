@@ -1,11 +1,10 @@
 import React, { useContext, useState } from 'react';
-import { ThemeContext } from '../../../context/ThemeContext';
-import arrowIconDark from '../../../images/arrow-dark.svg';
-import arrowIconLight from '../../../images/arrow-light.svg';
+import { ThemeContext } from '../../context/ThemeContext';
+import arrowIconDark from '../../images/arrow-dark.svg';
+import arrowIconLight from '../../images/arrow-light.svg';
 
 export const Filter = () => {
   const { theme } = useContext(ThemeContext);
-
 
   // Remove the 'Filter by Region' text once you select an option
   const [filterName, setFilterName] = useState('Filter by Region');

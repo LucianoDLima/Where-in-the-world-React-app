@@ -1,0 +1,11 @@
+@use '../../styles/spacing' as spacing;
+@use '../../styles/mixin' as *;
+
+main {
+  padding-inline: spacing.$min-padding-000;
+  max-width: $laptop-large;
+  margin-inline: auto;
+  @include tablet {
+    padding-inline: spacing.$max-padding-900;
+  }
+}

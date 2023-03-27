@@ -188,10 +188,23 @@ header.light-mode {
   margin-inline: auto;
   padding-inline: 1rem;
   gap: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 @media screen and (min-width: 48em) {
   .search-filter-container {
     flex-direction: row;
+    padding-inline: 5rem;
+    margin-bottom: 3rem;
+  }
+}
+
+main {
+  padding-inline: 1rem;
+  max-width: 90em;
+  margin-inline: auto;
+}
+@media screen and (min-width: 48em) {
+  main {
     padding-inline: 5rem;
   }
 }
