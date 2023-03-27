@@ -26,8 +26,9 @@ export const Filter = () => {
         autoComplete="off"
         id="country-options"
         onChange={toggleFilterName}
+        defaultValue=''
       >
-        <option disabled selected></option>
+        <option disabled value=''></option>
         <option>All</option>
         <option>Africa</option>
         <option>America</option>

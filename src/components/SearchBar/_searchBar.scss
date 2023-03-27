@@ -26,7 +26,7 @@
     border: none;
     font-weight: font.$fw-000;
     border-radius: spacing.$br--100;
-    padding: spacing.$min-padding--200 spacing.$max-padding-800;
+    padding: spacing.$min-padding--200 spacing.$max-padding-700;
     background-color: color.$dm-bg-secondary;
     color: color.$dm-text-main;
 
@@ -49,7 +49,7 @@
     }
 
     input {
-      padding: spacing.$min-padding-100 (spacing.$max-padding-800 + .2rem);
+      padding: spacing.$min-padding-100 (spacing.$max-padding-700 + .2rem);
     }
 
     ::placeholder {

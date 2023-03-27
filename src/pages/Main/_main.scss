@@ -2,10 +2,16 @@
 @use '../../styles/mixin' as *;
 
 main {
-  padding-inline: spacing.$min-padding-000;
+  padding-inline: 3.7rem;
   max-width: $laptop-large;
   margin-inline: auto;
+  justify-items: center;
+  display: grid;
+  gap: 4.5rem;
+  
   @include tablet {
+    grid-template-columns: repeat(auto-fit, minmax(spacing.$card-width-s, 1fr));
+    gap: 4.5rem;
     padding-inline: spacing.$max-padding-900;
   }
 }
