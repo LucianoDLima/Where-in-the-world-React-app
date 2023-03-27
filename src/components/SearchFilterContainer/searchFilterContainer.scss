@@ -1,12 +1,23 @@
 @use '../../styles/spacing' as spacing;
+@use '../../styles/typography' as font;
+@use '../../styles/colors' as color;
+@use '../../styles/mixin' as *;
 @forward './SearchBar/searchBar';
 @forward './Filter/filter.scss';
 
 .search-filter-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   width: 100%;
   margin-inline: auto;
-  padding-inline: spacing.$max-width-padding;
+  padding-inline: spacing.$min-padding-000;
+  gap: spacing.$med-padding-500;
+  
+  
+  @include tablet {
+    flex-direction: row;
+    padding-inline: spacing.$max-padding-900;
+  }
 
 }

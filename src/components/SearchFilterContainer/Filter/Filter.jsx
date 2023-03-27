@@ -3,19 +3,8 @@ import { ThemeContext } from '../../../context/ThemeContext';
 import arrowIconDark from '../../../images/arrow-dark.svg';
 import arrowIconLight from '../../../images/arrow-light.svg';
 
-export const Filter = (props) => {
+export const Filter = () => {
   const { theme } = useContext(ThemeContext);
-
-  // Make the Filter bar hoverable instead of clickable only
-  const [isHovered, setIsHovered] = useState(false);
-  const handleMouseOver = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsHovered(false);
-  };
-
 
 
   // Remove the 'Filter by Region' text once you select an option

@@ -1,3 +1,6 @@
+@use '../../styles/typography' as font;
+@use '../../styles/mixin' as *;
+
 .theme-container {
   display: flex;
   align-items: center;
@@ -5,11 +8,21 @@
   cursor: pointer;
 
   img {
-    width: 1rem;
+    width: font.$fs--200;
   }
 
   p {
-    font-size: 1.05rem;
+    font-size: font.$fs--200;
+  }
+
+  @include tablet {
+    img {
+      width: font.$fs-000;
+    }
+
+    p {
+      font-size: font.$fs-000;
+    }
   }
 }
 

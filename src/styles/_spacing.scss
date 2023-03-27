@@ -1,7 +1,11 @@
 // Width
 $max-width: 1440px;
-$max-width-padding: 5rem;
+$max-padding-800: 4.375rem;
+$max-padding-900: 5rem;
 
+
+$min-padding--200: .85rem;
+$min-padding--100: .95rem;
 $min-padding-000: 1rem;
 $min-padding-100: 1.15rem;
 $min-padding-200: 1.25rem;
@@ -11,14 +15,17 @@ $min-padding-500: 1.55rem;
 $min-padding-600: 1.65rem;
 $min-padding-700: 1.75rem;
 $min-padding-800: 1.85rem;
-$min-padding-900: 2rem;
+$min-padding-900: 1.95rem;
+
+$med-padding-000: 2rem;
+$med-padding-100: 2.1rem;
+$med-padding-200: 2.2rem;
+$med-padding-300: 2.3rem;
+$med-padding-400: 2.4rem;
+$med-padding-500: 2.5rem;
 
 $br--000: 0.05rem;
 $br--100: 0.15rem;
 $br--200: 0.25rem;
 $br--300: 0.35rem;
 $br--400: 0.45rem;
-  // --search-padding: 1.15rem;
-  // --max-width: 1440px;
-  // --max-width-padding: 5rem;
-  // --min-width-padding: 1.25rem;

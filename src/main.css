@@ -30,25 +30,45 @@ body.light-mode {
   cursor: pointer;
 }
 .theme-container img {
-  width: 1rem;
+  width: 0.75rem;
 }
 .theme-container p {
-  font-size: 1.05rem;
+  font-size: 0.75rem;
+}
+@media screen and (min-width: 48em) {
+  .theme-container img {
+    width: 1rem;
+  }
+  .theme-container p {
+    font-size: 1rem;
+  }
 }
 
 header {
   background-color: hsl(209deg, 23%, 22%);
   color: hsl(0deg, 0%, 100%);
   display: flex;
+  gap: 1rem;
   justify-content: space-between;
   width: 100%;
-  padding: 1.5rem 5rem;
+  padding: 1.75rem 1rem;
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15);
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 header h1 {
-  font-weight: 800;
-  font-size: 1.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-align: center;
+}
+@media screen and (min-width: 48em) {
+  header {
+    padding: 1.5rem 5rem;
+    margin-bottom: 3rem;
+  }
+  header h1 {
+    font-weight: 800;
+    font-size: 1.45rem;
+  }
 }
 
 header.light-mode {
@@ -58,55 +78,83 @@ header.light-mode {
 
 .search-bar {
   position: relative;
-  max-width: 30rem;
   width: 100%;
 }
 .search-bar label {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 2rem;
+  left: 1.75rem;
   display: flex;
+}
+.search-bar label img {
+  width: 1rem;
 }
 .search-bar input {
   width: 100%;
   border: none;
-  font-weight: 600;
+  font-weight: 300;
   border-radius: 0.15rem;
-  padding: 1.15rem 75px;
+  padding: 0.85rem 4.375rem;
   background-color: hsl(209deg, 23%, 22%);
   color: hsl(0deg, 0%, 100%);
+}
+.search-bar ::placeholder {
+  font-weight: 300;
+  font-size: 0.75rem;
+  color: hsl(0deg, 0%, 100%);
+}
+@media screen and (min-width: 48em) {
+  .search-bar {
+    width: 29.6rem;
+  }
+  .search-bar label {
+    left: 1.95rem;
+  }
+  .search-bar label img {
+    width: 1.125rem;
+  }
+  .search-bar input {
+    padding: 1.15rem 4.575rem;
+  }
+  .search-bar ::placeholder {
+    font-size: 0.875rem;
+  }
 }
 
 .search-bar.light-mode input {
   background-color: hsl(0deg, 0%, 100%);
   color: hsl(200deg, 15%, 8%);
 }
+.search-bar.light-mode ::placeholder {
+  color: hsl(200deg, 15%, 8%);
+}
 
 .filter-container {
   position: relative;
-  max-width: 12.5rem;
+  max-width: 12.4rem;
+  height: 2.824rem;
 }
 .filter-container .filter-title {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   position: absolute;
   pointer-events: none;
   top: 50%;
   transform: translateY(-50%);
-  left: 1.45rem;
+  left: 1.35rem;
 }
 .filter-container .filter-arrow-icon {
   position: absolute;
   pointer-events: none;
   top: 50%;
   transform: translateY(-50%);
-  right: 1.45rem;
+  right: 1.35rem;
 }
 .filter-container .filter-arrow-icon .active {
   transform: rotate(-180deg);
 }
 .filter-container select {
-  width: 12.5rem;
+  width: 100%;
   height: 100%;
   border: none;
   padding-left: 1.15rem;
@@ -118,6 +166,12 @@ header.light-mode {
   appearance: none;
   cursor: pointer;
 }
+@media screen and (min-width: 48em) {
+  .filter-container {
+    width: 100%;
+    height: 3.424rem;
+  }
+}
 
 .filter-container.light-mode > * {
   background-color: hsl(0deg, 0%, 100%);
@@ -126,10 +180,18 @@ header.light-mode {
 
 .search-filter-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   width: 100%;
   margin-inline: auto;
-  padding-inline: 5rem;
+  padding-inline: 1rem;
+  gap: 2.5rem;
+}
+@media screen and (min-width: 48em) {
+  .search-filter-container {
+    flex-direction: row;
+    padding-inline: 5rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
