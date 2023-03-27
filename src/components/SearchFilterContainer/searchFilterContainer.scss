@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+  max-width: $laptop-large;
   margin-inline: auto;
   padding-inline: spacing.$min-padding-000;
   gap: spacing.$med-padding-500;
