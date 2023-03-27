@@ -11,6 +11,9 @@ export const ThemeProvider = ({ children }) => {
   // Update local storage when theme changes
   useEffect(() => {
     localStorage.setItem('theme', theme);
+
+    // Apply the theme class to the body of the page
+    document.body.className = theme
   }, [theme]);
 
   // Update theme when user changes theme preferences in browser or device settings. Empty string is the dark mode, I set it as default because no one deserves to have their eyes burned

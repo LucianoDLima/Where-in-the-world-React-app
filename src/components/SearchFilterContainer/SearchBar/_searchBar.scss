@@ -6,6 +6,7 @@
 .search-bar {
   position: relative;
   width: 100%;
+  box-shadow: 0px 0px 15px color.$dm-box-shadow-color;
 
   label {
     position: absolute;
