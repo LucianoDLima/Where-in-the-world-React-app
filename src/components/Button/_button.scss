@@ -1,0 +1,29 @@
+@use '../../styles/colors' as color;
+@use '../../styles/spacing' as spacing;
+@use '../../styles/typography' as font;
+
+
+.main-button {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: .5rem;
+  background-color: color.$dm-bg-secondary;
+  padding: .52rem 2.15rem;
+  border-radius: spacing.$br--300;
+  border: none;
+  font-size: font.$fs-000;
+  box-shadow: 0 0 15px color.$dm-box-shadow-color;
+  text-align: center;
+  cursor: pointer;
+
+  img {
+    max-width: 1.45rem;
+    width: 100%;
+  }
+
+}
+
+body.light-mode .main-button {
+  background-color: color.$lm-bg-secondary;
+}

@@ -13,7 +13,6 @@ useEffect(() => {
       );
       const data = await response.json();
       setCountryData(data);
-      console.log(data);
     } catch (error) {
       console.error(error);
     }

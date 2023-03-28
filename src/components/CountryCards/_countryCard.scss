@@ -2,6 +2,7 @@
 @use '../../styles/colors' as color;
 @use '../../styles/typography' as font;
 @use '../../styles/mixin' as *;
+@forward '../Button/button';
 
 
 .country-card__container {

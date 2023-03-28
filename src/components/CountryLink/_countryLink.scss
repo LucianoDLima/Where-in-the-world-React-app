@@ -1,0 +1,7 @@
+@use '../../styles/spacing' as spacing;
+@use '../../styles/colors' as color;
+@use '../../styles/typography' as font;
+
+.country-detail {
+  padding-inline: spacing.$max-padding-900;
+}

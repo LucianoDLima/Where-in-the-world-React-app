@@ -6,11 +6,10 @@ import Main from '../Main/Main'
 
 const Base =  () => {
   return (
-    <ThemeProvider>
-      <Header />
+      <>
       <SearchFilterContainer />
       <Main />
-    </ThemeProvider>
+      </>
   )
 }
 

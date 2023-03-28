@@ -5,7 +5,13 @@
 }
 
 input,
-select {
+select,
+button {
   font-family: inherit;
   color: inherit;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
 }

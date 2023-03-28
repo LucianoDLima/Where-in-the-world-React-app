@@ -6,9 +6,15 @@
 }
 
 input,
-select {
+select,
+button {
   font-family: inherit;
   color: inherit;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
 }
 
 body {
@@ -53,6 +59,10 @@ header {
   padding: 1.75rem 1rem;
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15);
   margin-bottom: 1.5rem;
+}
+header a {
+  text-decoration: none;
+  color: unset;
 }
 header h1 {
   font-weight: 600;
@@ -213,6 +223,29 @@ main {
   }
 }
 
+.main-button {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 0.5rem;
+  background-color: hsl(209deg, 23%, 22%);
+  padding: 0.52rem 2.15rem;
+  border-radius: 0.35rem;
+  border: none;
+  font-size: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  cursor: pointer;
+}
+.main-button img {
+  max-width: 1.45rem;
+  width: 100%;
+}
+
+body.light-mode .main-button {
+  background-color: hsl(0deg, 0%, 100%);
+}
+
 .country-card__container {
   display: flex;
   flex-direction: column;
@@ -266,6 +299,10 @@ body.light-mode .country-card__container {
 }
 body.light-mode .country-card__container .country-card__name {
   color: hsl(200deg, 15%, 8%);
+}
+
+.country-detail {
+  padding-inline: 5rem;
 }
 
 /*# sourceMappingURL=main.css.map */
