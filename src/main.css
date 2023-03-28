@@ -15,7 +15,6 @@ body {
   background-color: hsl(207deg, 26%, 17%);
   color: hsl(0deg, 0%, 100%);
   font-family: "Nunito Sans", sans-serif;
-  height: 120vh;
 }
 
 body.light-mode {

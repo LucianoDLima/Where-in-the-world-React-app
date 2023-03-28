@@ -40,6 +40,7 @@ useEffect(() => {
             .replace(/,/g, '.')}
           region={country.region}
           capital={country.capital}
+          to={country.name.common}
         />
         
       ))}
