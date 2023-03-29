@@ -301,8 +301,30 @@ body.light-mode .country-card__container .country-card__name {
   color: hsl(200deg, 15%, 8%);
 }
 
-.country-detail {
-  padding-inline: 5rem;
+.country-detail__container .country-detail__information {
+  display: flex;
+  align-items: center;
+  gap: 9rem;
+}
+.country-detail__container .country-detail__information .country-detail__image-box {
+  max-width: 24.85rem;
+}
+.country-detail__container .country-detail__information .country-detail__image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (min-width: 48em) {
+  .country-detail {
+    padding-inline: 5rem;
+  }
+  .country-detail__container .back-button {
+    margin-block: 4.9rem 5.1rem;
+  }
+  .country-detail__container .country-detail__information .country-detail__image-box {
+    max-width: 34.85rem;
+    height: 25rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

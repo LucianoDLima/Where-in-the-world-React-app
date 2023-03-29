@@ -1,7 +1,46 @@
 @use '../../styles/spacing' as spacing;
 @use '../../styles/colors' as color;
 @use '../../styles/typography' as font;
+@use '../../styles/mixin' as *;
 
 .country-detail {
-  padding-inline: spacing.$max-padding-900;
+
+  &__container {
+
+    .country-detail__information {
+      display: flex;
+      align-items: center;
+      gap: 9rem;
+      .country-detail__image-box {
+        max-width: 24.85rem;
+        
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  
+  
+  @include tablet {
+    padding-inline: spacing.$max-padding-900;
+
+    &__container {
+
+      .back-button {
+        margin-block: 4.9rem 5.1rem;
+      }
+
+      .country-detail__information {
+
+        .country-detail__image-box {
+          max-width: 34.85rem;
+          height: 25rem;
+        }
+      }
+    }
+    
+  }
 }
