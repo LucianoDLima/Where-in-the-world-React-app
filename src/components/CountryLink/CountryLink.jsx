@@ -17,7 +17,7 @@ const CountryLink = () => {
     const fetchCountryName = async () => {
       try {
         const response = await fetch(
-          `https://restcountries.com/v3.1/name/${param.id}`
+          `https://restcountries.com/v3.1/name/${param.id}/?fullText=true`
         );
 
         if (!response.ok) {
@@ -30,7 +30,6 @@ const CountryLink = () => {
         setLoading(false);
         setError404(false);
       } catch (error) {
-        console.log('yes');
         setError404(true);
         setLoading(false);
       }
