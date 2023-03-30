@@ -4,43 +4,85 @@
 @use '../../styles/mixin' as *;
 
 .country-detail {
+  padding-inline: spacing.$min-padding-900;
+  padding-block: 2rem 5rem;
 
-  &__container {
-
-    .country-detail__information {
-      display: flex;
-      align-items: center;
-      gap: 9rem;
-      .country-detail__image-box {
-        max-width: 24.85rem;
-        
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-    }
+  // For the buttons since they have a <Link> wrapped around them
+  a {
+    display: inline-block;
   }
+  .back-button {
+    margin-block: 0 5rem;
+  }
+}
+
+.country-detail__information {
+  max-width: 45.625rem;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+}
+
+.country-detail__image-box {
+  margin-bottom: 3rem;
   
+  img {
+    border-radius: spacing.$br--100;
+    width: 100%;
+  }
+}
+
+.country-detail__information-content {
+
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.country-detail__general {
+  display: grid;
+  gap: .6rem;
+  margin-bottom: 3rem;
   
   @include tablet {
-    padding-inline: spacing.$max-padding-900;
-
-    &__container {
-
-      .back-button {
-        margin-block: 4.9rem 5.1rem;
-      }
-
-      .country-detail__information {
-
-        .country-detail__image-box {
-          max-width: 34.85rem;
-          height: 25rem;
-        }
-      }
+    grid-template-columns: repeat(2, 1fr);
+  }
+  p {
+    font-weight: font.$fw-100;
+    span {
+      font-weight: font.$fw-000;
+      opacity: .8;
     }
-    
+  }
+}
+
+.country-detail__borders {
+  width: 100%;
+  p {
+    font-size: font.$fs-200;
+    font-weight: font.$fw-100;
+    margin-bottom: 1.2rem;
+  }
+  
+  ul {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: .5rem;
+  }
+  
+  @include tablet {
+    display: flex;
+    align-items: center;
+
+    p {
+      margin-bottom: unset;
+    }
+  }
+}
+
+@include tablet {
+  .country-detail {
+    padding-inline: spacing.$max-padding-900;
   }
 }

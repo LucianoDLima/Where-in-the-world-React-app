@@ -6,7 +6,8 @@
 
 input,
 select,
-button {
+button,
+option {
   font-family: inherit;
   color: inherit;
 }
@@ -14,4 +15,8 @@ button {
 a {
   color: unset;
   text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
 }

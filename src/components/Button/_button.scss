@@ -6,7 +6,6 @@
 .main-button {
   display: flex;
   align-items: center;
-  text-align: left;
   gap: .5rem;
   background-color: color.$dm-bg-secondary;
   padding: .52rem 2.15rem;
@@ -14,7 +13,6 @@
   border: none;
   font-size: font.$fs-000;
   box-shadow: 0 0 15px color.$dm-box-shadow-color;
-  text-align: center;
   cursor: pointer;
 
   img {

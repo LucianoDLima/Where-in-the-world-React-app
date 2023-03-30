@@ -15,8 +15,6 @@ const CountryLink = () => {
   const [borderCountries, setBorderCountries] = useState([]);
   const [error404, setError404] = useState(false);
 
-  console.log('border:', borderCountries);
-
 
   // This will fetch the data of the previously clicked country on the main page plus its borders if it has one
   useEffect(() => {
@@ -48,7 +46,6 @@ const CountryLink = () => {
           const borderData = await Promise.all(borderDataPromises);
           setLoading(false);
           setError404(false);
-          console.log(borderData);
           setBorderCountries(borderData);
         } else {
           setLoading(false);
@@ -130,13 +127,13 @@ const CountryLink = () => {
                 ))}
               </ul>
 
-              <div className="country-details__borders">
+              <div className="country-detail__borders">
                 <p>Border Countries:</p>
                 <ul>
                   {borderCountries.length === 0 ? 'No border countries' : Object.keys(countryData.borders).map((border, index) => (
                     <li key={countryData.borders[border]}>
                       <Button
-                        text={countryData.borders[border]}
+                        text={borderCountries[index][0].name.common}
                         to={`../${borderCountries[index][0].name.common}`}
                         click={() => setLoading(true)}
                       />
