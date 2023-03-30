@@ -33,6 +33,22 @@ body.light-mode {
   color: hsl(200deg, 15%, 8%);
 }
 
+main {
+  padding-inline: 3.7rem;
+  max-width: 90em;
+  margin-inline: auto;
+  justify-items: center;
+  display: grid;
+  gap: 4.5rem;
+}
+@media screen and (min-width: 48em) {
+  main {
+    grid-template-columns: repeat(auto-fit, minmax(16.563rem, 1fr));
+    gap: 4.5rem;
+    padding-inline: 5rem;
+  }
+}
+
 .theme-container {
   display: flex;
   align-items: center;
@@ -209,22 +225,6 @@ header.light-mode {
     flex-direction: row;
     padding-inline: 5rem;
     margin-bottom: 3rem;
-  }
-}
-
-main {
-  padding-inline: 3.7rem;
-  max-width: 90em;
-  margin-inline: auto;
-  justify-items: center;
-  display: grid;
-  gap: 4.5rem;
-}
-@media screen and (min-width: 48em) {
-  main {
-    grid-template-columns: repeat(auto-fit, minmax(16.563rem, 1fr));
-    gap: 4.5rem;
-    padding-inline: 5rem;
   }
 }
 

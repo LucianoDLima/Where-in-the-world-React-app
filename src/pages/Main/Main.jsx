@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import CountryCards from '../../components/CountryCards/CountryCards';
 
-const Main = () => {
+const Main = ({flag, flagAlt, countryName, population, region, capital, to}) => {
   const [countryData, setCountryData] = useState([]);
   const [visibleCountries, setVisibleCountries] = useState(30);
 
@@ -28,6 +28,7 @@ useEffect(() => {
 
   return (
     <main>
+      <CountryCards flag={flag} flagAlt={flagAlt} countryName={countryName} population={population} region={region} capital={capital} to={to} />
       {countryData.map((country) => (
         <CountryCards
           key={country.name.common}

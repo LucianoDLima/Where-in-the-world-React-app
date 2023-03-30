@@ -1,5 +1,7 @@
 @use '../../styles/colors.scss' as color;
 @use '../../styles/typography.scss' as typography;
+@use '../../styles/spacing' as spacing;
+@use '../../styles/mixin' as *;
 
 body {
   background-color: color.$dm-bg-main;
@@ -11,4 +13,19 @@ body {
 body.light-mode {
   background-color: color.$lm-bg-main;
   color: color.$lm-text-main;
+}
+
+main {
+  padding-inline: 3.7rem;
+  max-width: $laptop-large;
+  margin-inline: auto;
+  justify-items: center;
+  display: grid;
+  gap: 4.5rem;
+  
+  @include tablet {
+    grid-template-columns: repeat(auto-fit, minmax(spacing.$card-width-s, 1fr));
+    gap: 4.5rem;
+    padding-inline: spacing.$max-padding-900;
+  }
 }
