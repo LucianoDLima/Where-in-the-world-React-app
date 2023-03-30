@@ -4,6 +4,8 @@
 @use '../../styles/mixin' as *;
 
 .country-detail {
+  max-width: $laptop-large;
+  margin-inline: auto;
   padding-inline: spacing.$min-padding-900;
   padding-block: 2rem 5rem;
 
@@ -14,36 +16,63 @@
   .back-button {
     margin-block: 0 5rem;
   }
+
+  @include tablet {
+    padding-inline: spacing.$max-padding-900;
+  }
+  @include laptop-m {
+  }
 }
 
 .country-detail__information {
   max-width: 45.625rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-inline: auto;
+
+  @include laptop-m {
+    flex-direction: row;
+    margin-inline: unset;
+    max-width: unset;
+    gap: 8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
 }
 
 .country-detail__image-box {
   margin-bottom: 3rem;
-  
+
   img {
     border-radius: spacing.$br--100;
     width: 100%;
   }
+
+  @include laptop-m {
+    max-width: 40rem;
+
+    img {
+      width: 100%;
+    }
+  }
 }
 
 .country-detail__information-content {
-
   h2 {
     margin-bottom: 1.5rem;
+  }
+  @include laptop-m {
+    width: 100%;
   }
 }
 
 .country-detail__general {
   display: grid;
-  gap: .6rem;
+  gap: 0.6rem;
   margin-bottom: 3rem;
-  
+
   @include tablet {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -51,7 +80,7 @@
     font-weight: font.$fw-100;
     span {
       font-weight: font.$fw-000;
-      opacity: .8;
+      opacity: 0.8;
     }
   }
 }
@@ -63,14 +92,14 @@
     font-weight: font.$fw-100;
     margin-bottom: 1.2rem;
   }
-  
+
   ul {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: .5rem;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    gap: .6rem;
   }
-  
+
   @include tablet {
     display: flex;
     align-items: center;
@@ -79,10 +108,5 @@
       margin-bottom: unset;
     }
   }
-}
 
-@include tablet {
-  .country-detail {
-    padding-inline: spacing.$max-padding-900;
-  }
 }
