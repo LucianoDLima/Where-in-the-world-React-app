@@ -31,7 +31,7 @@ useEffect(() => {
       {countryData.map((country) => (
         <CountryCards
           key={country.name.common}
-          flag={country.flags.png}
+          flag={country.flags.svg}
           flagAlt={country.flags.alt}
           countryName={country.name.common}
           population={country.population
