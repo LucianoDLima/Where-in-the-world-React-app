@@ -343,6 +343,7 @@ body.light-mode .country-card__container .country-card__name {
 
 .country-detail__image-box {
   margin-bottom: 3rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 .country-detail__image-box img {
   border-radius: 0.15rem;

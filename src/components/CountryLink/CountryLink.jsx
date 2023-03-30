@@ -112,7 +112,7 @@ const CountryLink = () => {
                       .join(', '),
                   },
                   {
-                    label: 'Language',
+                    label: 'Languages',
                     value: Object.keys(countryData.languages)
                       .map((lang) => countryData.languages[lang])
                       .join(', '),

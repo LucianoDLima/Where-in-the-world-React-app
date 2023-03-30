@@ -42,6 +42,7 @@
 
 .country-detail__image-box {
   margin-bottom: 3rem;
+  box-shadow: 0 0 15px color.$dm-box-shadow-color;
 
   img {
     border-radius: spacing.$br--100;
