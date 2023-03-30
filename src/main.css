@@ -394,7 +394,7 @@ body.light-mode .country-card__container .country-card__name {
 .country-detail__borders ul {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 0.6rem;
 }
 @media screen and (min-width: 48em) {
@@ -404,6 +404,9 @@ body.light-mode .country-card__container .country-card__name {
   }
   .country-detail__borders p {
     margin-bottom: unset;
+  }
+  .country-detail__borders ul {
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
   }
 }
 
