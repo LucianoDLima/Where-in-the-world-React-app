@@ -20,8 +20,6 @@
   @include tablet {
     padding-inline: spacing.$max-padding-900;
   }
-  @include laptop-m {
-  }
 }
 
 .country-detail__information {
@@ -80,7 +78,7 @@
     font-weight: font.$fw-100;
     span {
       font-weight: font.$fw-000;
-      opacity: 0.8;
+      opacity: 0.9;
     }
   }
 }
@@ -94,9 +92,9 @@
   }
 
   ul {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: .6rem;
   }
 
@@ -108,9 +106,6 @@
       margin-bottom: unset;
     }
 
-    ul {
-      grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
-    }
   }
 
 }

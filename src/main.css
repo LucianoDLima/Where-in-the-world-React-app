@@ -321,6 +321,7 @@ body.light-mode .country-card__container .country-card__name {
     padding-inline: 5rem;
   }
 }
+
 .country-detail__information {
   max-width: 45.625rem;
   width: 100%;
@@ -380,7 +381,7 @@ body.light-mode .country-card__container .country-card__name {
 }
 .country-detail__general p span {
   font-weight: 300;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .country-detail__borders {
@@ -392,9 +393,9 @@ body.light-mode .country-card__container .country-card__name {
   margin-bottom: 1.2rem;
 }
 .country-detail__borders ul {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 0.6rem;
 }
 @media screen and (min-width: 48em) {
@@ -404,9 +405,6 @@ body.light-mode .country-card__container .country-card__name {
   }
   .country-detail__borders p {
     margin-bottom: unset;
-  }
-  .country-detail__borders ul {
-    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
   }
 }
 

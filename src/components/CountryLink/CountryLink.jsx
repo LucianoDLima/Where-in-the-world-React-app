@@ -80,7 +80,7 @@ const CountryLink = () => {
           />
           <div className="country-detail__information">
             <div className="country-detail__image-box">
-              <img src={countryData.flags.svg} />
+              <img src={countryData.flags.svg} alt={countryData.flags.alt} />
             </div>
 
             <div className="country-detail__information-content">
