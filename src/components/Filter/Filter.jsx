@@ -3,14 +3,9 @@ import { ThemeContext } from '../../context/ThemeContext';
 import arrowIconDark from '../../images/arrow-dark.svg';
 import arrowIconLight from '../../images/arrow-light.svg';
 
-export const Filter = () => {
+export const Filter = ({filterName, onChangeFilter}) => {
   const { theme } = useContext(ThemeContext);
 
-  // Remove the 'Filter by Region' text once you select an option
-  const [filterName, setFilterName] = useState('Filter by Region');
-  const toggleFilterName = () => {
-    setFilterName('');
-  };
 
   return (
     <div className={`filter-container ${!theme ? '' : 'light-mode'}`}>
@@ -25,7 +20,7 @@ export const Filter = () => {
       <select
         autoComplete="off"
         id="country-options"
-        onChange={toggleFilterName}
+        onChange={onChangeFilter}
         defaultValue=''
       >
         <option disabled value=''></option>
