@@ -74,7 +74,7 @@ const CountryLink = () => {
           <Button
             image={theme ? arrowDark : arrowLight}
             text="Back"
-            to="/"
+            to={-1}
             className="back-button"
             click={() => setLoading(true)}
           />
