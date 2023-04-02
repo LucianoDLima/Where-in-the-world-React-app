@@ -248,7 +248,7 @@ header.light-mode {
 
 .main-button:hover {
   transform: translateY(-5px);
-  border-radius: 0.75rem;
+  border-radius: 0;
 }
 
 body.light-mode .main-button {

@@ -25,7 +25,7 @@
 
 .main-button:hover {
   transform: translateY(-5px);
-  border-radius: (spacing.$br--100 * 5);
+  border-radius: 0;
 }
 
 body.light-mode .main-button {
