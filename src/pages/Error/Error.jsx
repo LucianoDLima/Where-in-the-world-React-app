@@ -1,15 +1,15 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react'
+import Button from '../../components/Button/Button'
+import arrowLight from '../../images/pointer-arrow-light.svg';
+import arrowDark from '../../images/pointer-arrow-dark.svg';
+import { ThemeContext } from '../../context/ThemeContext';
 
 const Error = () => {
+  const {theme} = useContext(ThemeContext)
   return (
     <>
-    <Link to='..' relative='path'>
-    <h1>Nothing to see here yet, there will be an error screen at some point...</h1>
-    <h1>Nothing to see here yet, there will be an error screen at some point...</h1>
-    <h1>Nothing to see here yet, there will be an error screen at some point...</h1>
-    <h1>Nothing to see here yet, there will be an error screen at some point...</h1>
-    </Link>
+    <Button text='Back' image={theme ? arrowDark : arrowLight} to={-1}/>
+    <h2 className='error-title'>Error 404, page not found.</h2>
     </>
   )
 }
