@@ -14,12 +14,18 @@
   font-size: font.$fs-000;
   box-shadow: 0 0 15px color.$dm-box-shadow-color;
   cursor: pointer;
+  transition: 50ms;
 
   img {
     max-width: 1.45rem;
     width: 100%;
   }
 
+}
+
+.main-button:hover {
+  transform: translateY(-5px);
+  border-radius: (spacing.$br--100 * 5);
 }
 
 body.light-mode .main-button {

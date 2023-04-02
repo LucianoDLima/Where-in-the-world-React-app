@@ -239,10 +239,16 @@ header.light-mode {
   font-size: 1rem;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+  transition: 50ms;
 }
 .main-button img {
   max-width: 1.45rem;
   width: 100%;
+}
+
+.main-button:hover {
+  transform: translateY(-5px);
+  border-radius: 0.75rem;
 }
 
 body.light-mode .main-button {
