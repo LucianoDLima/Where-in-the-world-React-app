@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* -- Define colors -- */
+    --clr-oxford-blue: 208deg 23% 22%;
+    --clr-ebony-clay: 209deg 26% 17%;
+    --clr-woodsmoke: 200deg 15% 8%;
+    --clr-gray: 0deg 0% 52%;
+    --clr-alabaster: 0deg 0% 98%;
+    --clr-white: 0deg 0% 100%;
+  }
+
+  /* -- UI - Use defined colors as light theme -- */
+  [data-theme="light"] {
+    --clr-bg-primary: var(--clr-alabaster);
+    --clr-bg-secondary: var(--clr-white);
+    --clr-text-primary: var(--clr-woodsmoke);
+  }
+
+  /* -- UI - Use defined colors as dark mode -- */
+  [data-theme="dark"] {
+    --clr-bg-primary: var(--clr-oxford-blue);
+    --clr-bg-secondary: var(--clr-ebony-clay);
+    --clr-text-primary: var(--clr-white);
+  }
+
+  /* -- Default body style -- */
+  body {
+    @apply bg-secondary
+  }
+}
