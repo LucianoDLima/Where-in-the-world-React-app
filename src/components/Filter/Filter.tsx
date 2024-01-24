@@ -1,20 +1,19 @@
-import React, { useContext, useState } from 'react';
-import { ThemeContext } from '../../context/ThemeContext';
+// import { ThemeContext } from '../../context/ThemeContext';
 import arrowIconDark from '../../images/arrow-dark.svg';
-import arrowIconLight from '../../images/arrow-light.svg';
+// import arrowIconLight from '../../images/arrow-light.svg';
 
-export const Filter = ({filterName, onChangeFilter}) => {
-  const { theme } = useContext(ThemeContext);
+export const Filter = ({filterName, onChangeFilter}: any) => {
+  // const { theme } = useContext(ThemeContext);
 
 
   return (
-    <div className={`filter-container ${!theme ? '' : 'light-mode'}`}>
+    <div className={`filter-container ${'light-mode'}`}>
       <label htmlFor="country-options" className="filter-title">
         <p>{filterName}</p>
       </label>
 
       <label htmlFor="country-options" className="filter-arrow-icon">
-        <img src={!theme ? arrowIconDark : arrowIconLight} />
+        <img src={arrowIconDark} />
       </label>
 
       <select

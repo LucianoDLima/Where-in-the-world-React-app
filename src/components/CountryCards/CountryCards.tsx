@@ -1,7 +1,6 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 
-const CountryCards = ({flag, flagAlt, countryName, population, region, capital, to}) => {
+const CountryCards = ({flag, flagAlt, countryName, population, region, capital, to}: any) => {
   return (
     <div className='country-card__container' >
       <Link className='country-card__flag' to={to}>

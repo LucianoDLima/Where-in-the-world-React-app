@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { ThemeContext } from '../../context/ThemeContext';
+// import React, { useContext, useEffect, useState } from 'react';
+// import { ThemeContext } from '../../context/ThemeContext';
 import { Filter } from '../Filter/Filter';
 import SearchBar from '../SearchBar/SearchBar';
 
-const SearchFilterContainer = ({inputValue, onChangeInput, onChangeFilter, filterName}) => {
+const SearchFilterContainer = ({inputValue, onChangeInput, onChangeFilter, filterName}: any) => {
 
   return (
     <section className={`search-filter-container`}>

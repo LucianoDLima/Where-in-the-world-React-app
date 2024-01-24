@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import CountryCards from '../../components/CountryCards/CountryCards';
 import SearchFilterContainer from '../../components/SearchFilterContainer/SearchFilterContainer';
 
@@ -33,7 +33,7 @@ const Base = () => {
     if(searchFilter && searchFilter !== 'All') {
       const fetchCountryData = async () => {
         try {
-          const response = await fetch(
+          const response: any = await fetch(
             `https://restcountries.com/v3.1/region/${searchFilter}`
           )
 
@@ -41,7 +41,7 @@ const Base = () => {
             throw new Error(response.status)
           }
 
-          const data = await response.json()
+          const data: any = await response.json()
           console.log(data);
           setCountryData(data)
         } catch(error) {
@@ -56,15 +56,15 @@ const Base = () => {
     }
   }, [searchFilter]);
 
-  const inputSearch = (e) => {
+  const inputSearch = (e: any) => {
     setSearchInput(e.target.value);
   };
   // Filters the coutries depending on the inputSearch, if you write something, only that will show up
-  const filteredCountries = countryData.filter(country => {
+  const filteredCountries: any = countryData.filter(country => {
     return country.name.common.toLowerCase().includes(searchInput.toLowerCase())
   })
 
-  const filterSearch = (e) => {
+  const filterSearch = (e: any) => {
     setSearchFilter(e.target.value)
     setFilterName('');
   };
@@ -78,7 +78,7 @@ const Base = () => {
         filterName={filterName}
       />
       <main>
-        {filteredCountries.map((country) =>  (
+        {filteredCountries.map((country: any) =>  (
           <CountryCards
             key={country.name.common}
             flag={country.flags.svg}

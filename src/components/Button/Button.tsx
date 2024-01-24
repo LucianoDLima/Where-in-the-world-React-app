@@ -1,7 +1,7 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Button = ({ text, image, to, className, click }) => {
+const Button = ({ text, image, to, className, click }: any) => {
   return (
     <Link to={to} className={className}>
       <button className={`main-button `} onClick={click}>
