@@ -15,7 +15,7 @@ function ThemeToggle() {
     <button
       className="flex items-center gap-2"
       onClick={toggleTheme}
-      aria-label={`Change to ${darkTheme ? "dark theme" : "light theme"}`}
+      aria-label={`${darkTheme ? "Dark mode" : "Light mode"} on. Change to ${darkTheme ? "light theme" : "dark theme"}`}
     >
       <ThemeToggleContent />
     </button>

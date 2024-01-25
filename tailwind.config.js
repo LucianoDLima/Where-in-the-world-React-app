@@ -17,6 +17,20 @@ export default {
         primary: "hsl(var(--clr-bg-primary) / <alpha-value>)",
         secondary: "hsl(var(--clr-bg-secondary) / <alpha-value>)",
       },
+      fill: {
+        text: {
+          primary: "hsl(var(--clr-text-primary) / <alpha-value>)",
+        },
+      },
+      stroke: {
+        text: {
+          primary: "hsl(var(--clr-text-primary) / <alpha-value>)",
+        },
+      },
+      boxShadow: {
+        soft: "0px 3px 5px 0px rgba(0, 0, 0, 0.15)",
+        foggy: "0px 0px 15px 0px rgba(0, 0, 0, 0.15)",
+      },
     },
   },
   plugins: [],
