@@ -1,4 +1,4 @@
-import { useTheme } from "../../Context/useTheme";
+import { useTheme } from "../../context/useTheme";
 
 /**
  * Render the items inside the theme toggle

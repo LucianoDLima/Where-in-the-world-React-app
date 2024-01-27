@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 *.fig
+commit.md
 
 # Editor directories and files
 .vscode/*

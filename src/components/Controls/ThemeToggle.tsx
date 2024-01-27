@@ -1,4 +1,4 @@
-import { useTheme, useThemeUpdate } from "../../Context/useTheme";
+import { useTheme, useThemeUpdate } from "../../context/useTheme";
 import ThemeToggleContent from "../Common/ThemeToggleContent";
 
 /**

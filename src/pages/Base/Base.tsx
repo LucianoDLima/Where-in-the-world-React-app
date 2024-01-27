@@ -1,8 +1,12 @@
-// import { useEffect, useState } from "react";
-// import CountryCards from "../../components/CountryCards/CountryCards";
 import FilterWrapper from "../../components/Common/FilterWrapper";
+import { useCountryContext } from "../../context/useCountries";
+import useInitialDataRequest from "../../hooks/useInitialDataRequest";
+import CountryCards from "../../components/Common/CountryCards";
 
 const Base = () => {
+  const { countries } = useCountryContext();
+
+  useInitialDataRequest();
   // const [countryData, setCountryData] = useState([]);
   // const [allCountries, setAllCountries] = useState(true);
   // const [searchInput, setSearchInput] = useState("");
@@ -69,24 +73,11 @@ const Base = () => {
   //   setSearchFilter(e.target.value);
   //   setFilterName("");
   // };
-
   return (
     <>
       <FilterWrapper />
-      {/* <main>
-        {filteredCountries.map((country: any) => (
-          <CountryCards
-            key={country.name.common}
-            flag={country.flags.svg}
-            flagAlt={country.flags.alt}
-            countryName={country.name.common}
-            population={country.population.toLocaleString().replace(/,/g, ".")}
-            region={country.region}
-            capital={country.capital}
-            to={country.name.common}
-          />
-        ))}
-      </main> */}
+      <h1 className="sr-only">Countries across the world</h1>
+      <main>{countries && <CountryCards />}</main>
     </>
   );
 };

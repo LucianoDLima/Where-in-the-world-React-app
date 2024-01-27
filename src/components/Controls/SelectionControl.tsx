@@ -1,6 +1,7 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent } from "react";
 import SelectLabel from "../Common/SelectLabel";
 import OptionsList from "../Common/OptionsList";
+import { useFilterContext } from "../../context/useFilters";
 
 /**
  * Handle sorting/filtering the countries based on the options provided
@@ -8,18 +9,22 @@ import OptionsList from "../Common/OptionsList";
  * @returns {JSX.Element}
  */
 function SelectionControl() {
-  const [currentOption, setCurrenOption] = useState<string | undefined>();
   const labelTarget = "country-options";
+  const { filter, setFilter } = useFilterContext();
 
   function handleLabel(e: ChangeEvent<HTMLSelectElement>): void {
-    setCurrenOption(e.target.value);
-    console.log(e.bubbles);
+    const selectionValue = e.target.value;
+
+    setFilter((prev) => ({
+      ...prev,
+      select: selectionValue,
+    }));
   }
 
   return (
     <>
       <SelectLabel
-        label={currentOption ? "" : "Filter by Region"}
+        label={filter.select !== undefined ? "" : "Filter by Region"}
         htmlFor={labelTarget}
       />
 
@@ -27,7 +32,7 @@ function SelectionControl() {
         className="w-full appearance-none rounded-sm bg-primary py-3 ps-5 md:py-4 "
         autoComplete="off"
         id={labelTarget}
-        defaultValue=""
+        defaultValue={filter.select !== undefined ? filter.select : ""}
         onChange={handleLabel}
       >
         <OptionsList />

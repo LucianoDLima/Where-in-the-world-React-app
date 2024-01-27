@@ -1,4 +1,5 @@
 import { ChangeEvent, useState } from "react";
+import { useFilterContext } from "../../context/useFilters";
 
 /**
  * Props for the SearchInput
@@ -20,13 +21,15 @@ type SearchInputProps = {
  * @returns {JSX.Element}
  */
 function SearchInput({ id }: SearchInputProps) {
-  const [currentInput, setCurrentInput] = useState<string | undefined>(
-    undefined,
-  );
+  const { setFilter } = useFilterContext();
 
   function handleUserInput(e: ChangeEvent<HTMLInputElement>): void {
-    setCurrentInput(e.target.value);
-    console.log(currentInput);
+    const inputValue = e.target.value;
+
+    setFilter((prev) => ({
+      ...prev,
+      search: inputValue,
+    }));
   }
 
   return (

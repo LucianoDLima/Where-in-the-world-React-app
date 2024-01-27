@@ -8,7 +8,7 @@ function OptionsList() {
     "",
     "All",
     "Africa",
-    "America",
+    "Americas",
     "Asia",
     "Europe",
     "Oceania",
@@ -17,11 +17,7 @@ function OptionsList() {
   return (
     <>
       {continents.map((continent, index) => (
-        <option
-          key={index}
-          disabled={index === 0}
-          value={continent}
-        >
+        <option key={index} disabled={index === 0} value={continent}>
           {continent}
         </option>
       ))}

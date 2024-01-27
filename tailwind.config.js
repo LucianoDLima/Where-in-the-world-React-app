@@ -16,6 +16,7 @@ export default {
       backgroundColor: {
         primary: "hsl(var(--clr-bg-primary) / <alpha-value>)",
         secondary: "hsl(var(--clr-bg-secondary) / <alpha-value>)",
+        loading: "hsl(var(--clr-bg-loading) / <alpha-value>)",
       },
       fill: {
         text: {

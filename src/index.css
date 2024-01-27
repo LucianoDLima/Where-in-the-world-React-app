@@ -17,6 +17,7 @@
   [data-theme="light"] {
     --clr-bg-primary: var(--clr-alabaster);
     --clr-bg-secondary: var(--clr-white);
+    --clr-bg-loading: var(--clr-gray);
     --clr-text-primary: var(--clr-woodsmoke);
   }
 
@@ -24,6 +25,7 @@
   [data-theme="dark"] {
     --clr-bg-primary: var(--clr-oxford-blue);
     --clr-bg-secondary: var(--clr-ebony-clay);
+    --clr-bg-loading: var(--clr-ebony-clay);
     --clr-text-primary: var(--clr-white);
   }
 
