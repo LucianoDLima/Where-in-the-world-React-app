@@ -29,8 +29,8 @@ export default {
         },
       },
       boxShadow: {
-        soft: "0px 3px 5px 0px rgba(0, 0, 0, 0.15)",
-        foggy: "0px 0px 15px 0px rgba(0, 0, 0, 0.15)",
+        soft: "0px 3px 5px 0px rgba(0, 0, 0, 0.1)",
+        foggy: "0px 0px 15px 0px rgba(0, 0, 0, 0.23)",
       },
     },
   },

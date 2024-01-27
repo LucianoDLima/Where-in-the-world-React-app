@@ -19,7 +19,7 @@ type CardFlagType = {
  */
 function CardFlag({ flag, country }: CardFlagType) {
   return (
-    <Link tabIndex={-1} className="mb-6 h-full max-h-40" to={country}>
+    <Link tabIndex={-1} className="mb-6 h-40" to={country}>
       <img
         className="h-full w-full object-cover"
         src={flag}

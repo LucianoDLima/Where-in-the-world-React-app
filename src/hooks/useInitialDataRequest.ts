@@ -19,7 +19,18 @@ export default function useInitialDataRequest(): void {
 
     async function fetchDataAndUpdateCountry() {
       try {
+        setStatus((prev) => ({
+          ...prev,
+          isLoading: true
+        }))
+
         const data = await fetchData();
+
+        setStatus((prev) => ({
+          ...prev,
+          isLoading: false
+        }))
+
         setCountries(data);
 
         setStatus((prev) => ({
