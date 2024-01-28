@@ -41,13 +41,12 @@ function CountryCards() {
           role="link"
           className="flex w-full max-w-72 flex-col overflow-hidden rounded-md bg-primary text-primary shadow-foggy md:max-w-64"
           onKeyUp={goToDetailsPage(data.name.common)}
-          aria-label={`Go to ${data.name.common} page`}
         >
           <CardFlag country={data.name.common} flag={data.flags.svg} />
 
           <CardDescription
             country={data.name.common}
-            population={data.population}
+            population={data.population.toLocaleString().replace(/,/g, ".")}
             region={data.region}
             capital={data.capital}
           />

@@ -12,7 +12,6 @@ function HeaderContent() {
       <Link
         to="./"
         className="text-center text-sm font-semibold md:text-2xl md:font-extrabold"
-        aria-label="Go to home page"
       >
         Where in the world?
       </Link>
