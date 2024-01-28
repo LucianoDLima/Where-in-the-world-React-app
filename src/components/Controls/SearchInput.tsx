@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent } from "react";
 import { useFilterContext } from "../../context/useFilters";
 
 /**
