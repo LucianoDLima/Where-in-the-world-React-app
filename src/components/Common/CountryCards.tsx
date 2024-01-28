@@ -16,30 +16,21 @@ function CountryCards() {
 
   // Handle key press if user is navigating with a keyboard
   function goToDetailsPage(to: string) {
-    return function handleKeyPress(e: KeyboardEvent<HTMLDivElement>): void {
+    return function handleKeyPress(e: KeyboardEvent<HTMLLIElement>): void {
       const enterKey = e.key === "Enter";
 
-      if (enterKey) {
-        // This fixed a bug that I forgot and can't reproduce
-        // Will leave it commented for now just in case...
-        // setFilter((prev) => ({
-        //   ...prev,
-        //   select: undefined,
-        // }));
-
-        navigate(to);
-      }
+      if (enterKey) navigate(to);
     };
   }
 
   return (
     <>
       {filteredCountries.map((data: CountriesType, index: number) => (
-        <div
+        <li
           tabIndex={0}
           key={index}
           role="link"
-          className="flex w-full max-w-72 flex-col overflow-hidden rounded-md bg-primary text-primary shadow-foggy md:max-w-64"
+          className="flex w-full min-w-[16.5rem] max-w-72 flex-col overflow-hidden rounded-md bg-primary text-primary shadow-foggy md:max-w-64"
           onKeyUp={goToDetailsPage(data.name.common)}
         >
           <CardFlag country={data.name.common} flag={data.flags.svg} />
@@ -50,7 +41,7 @@ function CountryCards() {
             region={data.region}
             capital={data.capital}
           />
-        </div>
+        </li>
       ))}
       ;
     </>

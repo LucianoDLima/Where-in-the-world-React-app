@@ -8,7 +8,7 @@ import ThemeToggle from "../Controls/ThemeToggle";
  */
 function HeaderContent() {
   return (
-    <div className="mx-auto flex w-full max-w-screen-xl justify-between">
+    <div className="mx-auto flex w-full max-w-screen-xl justify-between px-4">
       <Link
         to="./"
         className="text-center text-sm font-semibold md:text-2xl md:font-extrabold"

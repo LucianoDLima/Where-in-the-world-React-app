@@ -11,7 +11,7 @@ function SkeletonCard() {
   ];
 
   return (
-    <div className="flex w-full max-w-72 flex-col overflow-hidden rounded-md bg-primary text-primary shadow-foggy md:max-w-64">
+    <li className="flex w-full min-w-[16.5rem] max-w-72 flex-col overflow-hidden rounded-md bg-primary text-primary shadow-foggy md:max-w-64">
       <div className="mb-10 h-40">
         <div className="flex h-full w-full animate-pulse items-center justify-center">
           <svg
@@ -40,7 +40,7 @@ function SkeletonCard() {
           )}
         </div>
       </div>
-    </div>
+    </li>
   );
 }
 

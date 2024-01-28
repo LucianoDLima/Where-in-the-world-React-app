@@ -10,7 +10,7 @@ import HeaderContent from "../../components/Common/HeaderContent";
 function Header() {
   return (
     <>
-      <header className="bg-primary px-4 py-7 text-primary shadow-soft">
+      <header className="bg-primary py-7 text-primary shadow-soft">
         <HeaderContent />
       </header>
 
