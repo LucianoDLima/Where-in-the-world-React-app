@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ThemeToggle from "../Controls/ThemeToggle";
+import ThemeToggle from "../../Controls/ThemeToggle";
 
 /**
  * Render the content inside the header section

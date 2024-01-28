@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import HeaderContent from "../../components/Common/HeaderContent";
+import HeaderContent from "../components/Layout/Header/HeaderContent";
 
 /**
  * Render the header section

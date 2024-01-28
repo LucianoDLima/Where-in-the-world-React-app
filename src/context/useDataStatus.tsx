@@ -18,42 +18,40 @@ import {
  * @property {boolean} isLoading - Check if the api request is pending
  * @property {boolean} isRetrieved - Check if data has already been retrieved
  */
-interface StatusInterface {
+interface DataStatusInterface {
   isLoading: boolean;
   isRetrieved: boolean;
 }
 
-type StatusContextType = {
-  status: StatusInterface;
-  setStatus: Dispatch<SetStateAction<StatusInterface>>;
+type DataStatusContextType = {
+  status: DataStatusInterface;
+  setStatus: Dispatch<SetStateAction<DataStatusInterface>>;
 };
 
-export const StatusContext = createContext<StatusContextType | undefined>(
-  undefined,
-);
+export const DataStatusContext = createContext<DataStatusContextType | undefined>(undefined);
 
-type StatusProviderProps = {
+type DataStatusProps = {
   children: ReactNode;
 };
 
-export function StatusProvider({ children }: StatusProviderProps) {
-  const [status, setStatus] = useState<StatusInterface>({
+export function DataStatusProvider({ children }: DataStatusProps) {
+  const [status, setStatus] = useState<DataStatusInterface>({
     isLoading: false,
     isRetrieved: false,
   });
 
   return (
-    <StatusContext.Provider value={{ status, setStatus }}>
+    <DataStatusContext.Provider value={{ status, setStatus }}>
       {children}
-    </StatusContext.Provider>
+    </DataStatusContext.Provider>
   );
 }
 
-export function useStatusContext(): StatusContextType {
-  const context = useContext(StatusContext);
+export function useDataStatusContext(): DataStatusContextType {
+  const context = useContext(DataStatusContext);
 
   if (!context) {
-    throw new Error("useStatusContext must be used within a StatusProvider");
+    throw new Error("useDataStatusContext must be used within a DataStatus");
   }
   return context;
 }

@@ -1,4 +1,4 @@
-import { useTheme } from "../../context/useTheme";
+import { useTheme } from "../../../context/useTheme";
 
 /**
  * Render the items inside the theme toggle
@@ -16,7 +16,7 @@ function ThemeToggleContent() {
         width="20"
         height="20"
         viewBox="0 0 20 20"
-        className="stroke-text-primary pointer-events-none"
+        className="pointer-events-none stroke-text-primary"
         fill="none"
       >
         <path

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { useCountryContext } from "../context/useCountries";
+import { useCountryDataContext } from "../context/useCountryData";
 import { fetchData } from "../service/fetchData";
-import { useStatusContext } from "../context/useStatus";
+import { useDataStatusContext } from "../context/useDataStatus";
 
 /**
  * Fetch data during mounting
@@ -9,8 +9,8 @@ import { useStatusContext } from "../context/useStatus";
  * @returns {void}
  */
 export default function useInitialDataRequest(): void {
-  const { setCountries } = useCountryContext();
-  const { status, setStatus } = useStatusContext();
+  const { setCountries } = useCountryDataContext();
+  const { status, setStatus } = useDataStatusContext();
 
   useEffect(() => {
     // Ensures no more requests are made after data has been retrieved
@@ -21,15 +21,15 @@ export default function useInitialDataRequest(): void {
       try {
         setStatus((prev) => ({
           ...prev,
-          isLoading: true
-        }))
+          isLoading: true,
+        }));
 
         const data = await fetchData();
 
         setStatus((prev) => ({
           ...prev,
-          isLoading: false
-        }))
+          isLoading: false,
+        }));
 
         setCountries(data);
 

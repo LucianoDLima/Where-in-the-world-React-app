@@ -1,10 +1,10 @@
 import { ChangeEvent } from "react";
-import { useFilterContext } from "../../context/useFilters";
+import { useDataFilterContext } from "../../context/useDataFilter";
 
 /**
  * Props for the SearchInput
  *
- * @property {string} id - Labels target
+ * @property {string} id - Label's target
  */
 type SearchInputProps = {
   id: string;
@@ -15,13 +15,12 @@ type SearchInputProps = {
  *
  * Responsabilities:
  * - Stores what the user types in the search input
- * - Uses the stored input to search in the already retrieved data (if available)
- * - If no data has been retrieved, triggers a fetch request based for the stored input
+ * - Uses the stored input to search in the retrieved data context
  *
  * @returns {JSX.Element}
  */
 function SearchInput({ id }: SearchInputProps) {
-  const { setFilter } = useFilterContext();
+  const { setFilter } = useDataFilterContext();
 
   function handleUserInput(e: ChangeEvent<HTMLInputElement>): void {
     const inputValue = e.target.value;

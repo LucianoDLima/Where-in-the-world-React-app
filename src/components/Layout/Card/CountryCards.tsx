@@ -1,9 +1,9 @@
 import CardFlag from "./CardFlag";
 import CardDescription from "./CardDescription";
-import { CountriesType } from "../../types";
+import { CountriesType } from "../../../types";
 import { useNavigate } from "react-router-dom";
 import { KeyboardEvent } from "react";
-import useFilteredData from "../../hooks/useFilteredData";
+import useFilteredData from "../../../hooks/useFilteredData";
 
 /**
  * Render list of country cards displaying information about each country.

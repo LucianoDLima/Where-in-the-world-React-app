@@ -1,21 +1,21 @@
 import { RouterProvider } from "react-router-dom";
 import { router } from "./routes";
 import { ThemeProvider } from "../context/useTheme";
-import { CountryProvider } from "../context/useCountries";
-import { StatusProvider } from "../context/useStatus";
-import { FilterProvider } from "../context/useFilters";
+import { CountryDataProvider } from "../context/useCountryData";
+import { DataStatusProvider } from "../context/useDataStatus";
+import { DataFilterProvider } from "../context/useDataFilter";
 
 function AppRoutes() {
   return (
     <>
       <ThemeProvider>
-        <CountryProvider>
-          <StatusProvider>
-            <FilterProvider>
+        <CountryDataProvider>
+          <DataStatusProvider>
+            <DataFilterProvider>
               <RouterProvider router={router} />
-            </FilterProvider>
-          </StatusProvider>
-        </CountryProvider>
+            </DataFilterProvider>
+          </DataStatusProvider>
+        </CountryDataProvider>
       </ThemeProvider>
     </>
   );

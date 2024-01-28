@@ -1,7 +1,7 @@
 import { ChangeEvent } from "react";
-import SelectLabel from "../Common/SelectLabel";
-import OptionsList from "../Common/OptionsList";
-import { useFilterContext } from "../../context/useFilters";
+import SelectLabel from "../Layout/Filter/SelectLabel";
+import OptionsList from "../Layout/Filter/OptionsList";
+import { useDataFilterContext } from "../../context/useDataFilter";
 
 /**
  * Handle sorting/filtering the countries based on the options provided
@@ -10,7 +10,7 @@ import { useFilterContext } from "../../context/useFilters";
  */
 function SelectionControl() {
   const labelTarget = "country-options";
-  const { filter, setFilter } = useFilterContext();
+  const { filter, setFilter } = useDataFilterContext();
 
   function handleLabel(e: ChangeEvent<HTMLSelectElement>): void {
     const selectionValue = e.target.value;

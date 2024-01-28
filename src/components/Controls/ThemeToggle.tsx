@@ -1,5 +1,5 @@
 import { useTheme, useThemeUpdate } from "../../context/useTheme";
-import ThemeToggleContent from "../Common/ThemeToggleContent";
+import ThemeToggleContent from "../Layout/Header/ThemeToggleContent";
 
 /**
  * Render the theme toggle

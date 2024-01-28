@@ -1,7 +1,7 @@
-import { useStatusContext } from "../../context/useStatus";
-import { useCountryContext } from "../../context/useCountries";
-import CountryCards from "../../components/Common/CountryCards";
-import SkeletonCard from "../../components/Common/SkeletonCard";
+import { useDataStatusContext } from "../../../context/useDataStatus";
+import { useCountryDataContext } from "../../../context/useCountryData";
+import CountryCards from "./CountryCards";
+import SkeletonCard from "./SkeletonCard";
 
 /**
  * Contain the list of country cards and their loading skeleton
@@ -9,8 +9,8 @@ import SkeletonCard from "../../components/Common/SkeletonCard";
  * @returns {JSX.Element}
  */
 function CardsContainer() {
-  const { status } = useStatusContext();
-  const { countries } = useCountryContext();
+  const { status } = useDataStatusContext();
+  const { countries } = useCountryDataContext();
 
   const skeletonCards = Array.from({ length: 16 }, (_, index) => index);
 

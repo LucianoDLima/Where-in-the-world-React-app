@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { useCountryContext } from "../context/useCountries";
-import { useFilterContext } from "../context/useFilters";
+import { useCountryDataContext } from "../context/useCountryData";
+import { useDataFilterContext } from "../context/useDataFilter";
 import { CountriesType } from "../types";
 
 /**
@@ -9,8 +9,8 @@ import { CountriesType } from "../types";
  * @returns {CountriesType[]}
  */
 export default function useFilteredData(): CountriesType[] {
-  const { countries } = useCountryContext();
-  const { filter } = useFilterContext();
+  const { countries } = useCountryDataContext();
+  const { filter } = useDataFilterContext();
   const [filteredCountries, setFilteredCountries] = useState<CountriesType[]>(
     [],
   );
