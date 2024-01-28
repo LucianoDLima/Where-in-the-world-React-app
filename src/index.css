@@ -31,6 +31,6 @@
 
   /* -- Default body style -- */
   body {
-    @apply bg-secondary
+    @apply bg-secondary font-nunito
   }
 }

@@ -32,6 +32,9 @@ export default {
         soft: "0px 3px 5px 0px rgba(0, 0, 0, 0.1)",
         foggy: "0px 0px 15px 0px rgba(0, 0, 0, 0.23)",
       },
+      fontFamily: {
+        nunito: ["Nunito Sans", "sans-serif"],
+      },
     },
   },
   plugins: [],
