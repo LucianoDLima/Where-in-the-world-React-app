@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Header from "../views/Header";
 import Error from "../views/Error";
 import Base from "../views/HomeBody";
-import CountryLink from "../components/CountryLink/CountryLink";
+import Details from "../views/Details";
 
 export const router = createBrowserRouter([
   {
@@ -16,7 +16,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/:id",
-        element: <CountryLink />,
+        element: <Details />,
       },
     ],
   },

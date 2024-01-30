@@ -11,7 +11,7 @@ const HomeBody = () => {
 
       <h1 className="sr-only">Countries across the world</h1>
 
-      <main>
+      <main className="mx-auto max-w-screen-xl px-4">
         <CardsContainer />
       </main>
     </>

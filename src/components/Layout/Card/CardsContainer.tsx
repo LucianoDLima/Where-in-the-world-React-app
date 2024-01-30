@@ -15,7 +15,7 @@ function CardsContainer() {
   const skeletonCards = Array.from({ length: 16 }, (_, index) => index);
 
   return (
-    <ul className="mx-auto grid w-full max-w-screen-xl justify-items-center gap-x-16 gap-y-10 px-4 pb-10  md:grid-cols-[repeat(auto-fit,minmax(16.5rem,1fr))]">
+    <ul className="grid w-full grid-cols-[repeat(auto-fit,minmax(16.5rem,1fr))] justify-items-center gap-x-10 gap-y-10 pb-10  md:gap-x-16">
       {status.isLoading
         ? skeletonCards.map((_, index) => <SkeletonCard key={index} />)
         : countries && <CountryCards />}

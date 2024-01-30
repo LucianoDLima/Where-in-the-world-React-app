@@ -1,9 +1,9 @@
 const countriesURL = "https://restcountries.com/v3.1/all";
-const filterURL = "?fields=name,capital,region,flags,population";
+// const filterURL = "?fields=name,capital,region,flags,population";
 
 export async function fetchData() {
   try {
-    const response = await fetch(`${countriesURL}${filterURL}`);
+    const response = await fetch(`${countriesURL}`);
     const data = await response.json();
 
     if (!response.ok) {

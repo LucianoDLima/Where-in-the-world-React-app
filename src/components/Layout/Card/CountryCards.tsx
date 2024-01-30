@@ -1,9 +1,10 @@
 import CardFlag from "./CardFlag";
-import CardDescription from "./CardDescription";
 import { CountriesType } from "../../../types";
 import { useNavigate } from "react-router-dom";
 import { KeyboardEvent } from "react";
 import useFilteredData from "../../../hooks/useFilteredData";
+import DescriptionContainer from "../../Common/DescriptionContainer";
+import DescriptionContent from "../../Common/DescriptionContent";
 
 /**
  * Render list of country cards displaying information about each country.
@@ -35,12 +36,22 @@ function CountryCards() {
         >
           <CardFlag country={data.name.common} flag={data.flags.svg} />
 
-          <CardDescription
-            country={data.name.common}
-            population={data.population.toLocaleString().replace(/,/g, ".")}
-            region={data.region}
-            capital={data.capital}
-          />
+          <DescriptionContainer title={data.name.common}>
+            <DescriptionContent
+              list={[
+                {
+                  label: "Population: ",
+                  value: data.population.toLocaleString().replace(/,/g, "."),
+                },
+                { label: "Region: ", 
+                  value: data.region 
+                },
+                { label: "Capital: ", 
+                value: data.capital 
+                },
+              ]}
+            />
+          </DescriptionContainer>
         </li>
       ))}
       ;
