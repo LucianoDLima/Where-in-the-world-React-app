@@ -4,6 +4,7 @@ import useInitialDataRequest from "../hooks/useInitialDataRequest";
 import DetailsDescription from "../components/Layout/Details/DetailsDescription";
 import DetailsFlag from "../components/Layout/Details/DetailsFlag";
 import useNoCountryFound from "../hooks/useNoCountryFound";
+import SRH1 from "../components/Common/SRH1";
 
 const DetailsPage = () => {
   const { id } = useParams();
@@ -15,7 +16,9 @@ const DetailsPage = () => {
   useNoCountryFound();
 
   return (
-    <main className="mx-auto grid max-w-screen-xl place-items-center gap-x-4 px-4 text-primary @container md:grid-cols-2">
+    <main className="justify- mx-auto flex max-w-screen-xl flex-col items-center gap-x-4 px-4 text-primary @container md:grid-cols-2 md:flex-row ">
+      <SRH1 />
+
       <DetailsFlag countries={countries} id={id} />
       <DetailsDescription countries={countries} id={id} />
     </main>

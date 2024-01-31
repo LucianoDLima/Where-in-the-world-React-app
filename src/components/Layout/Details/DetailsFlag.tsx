@@ -20,7 +20,7 @@ function DetailsFlag({ id, countries }: DetailsFlagProps) {
     .map((country) => (
       <div
         key={country.name.common}
-        className="mx-auto max-w-[28rem] md:max-w-[34rem]"
+        className="mx-auto max-w-[28rem] md:mx-0 md:max-w-[34rem]"
       >
         <img src={country.flags.svg} alt={`${country.name.common} flag`} />
       </div>
