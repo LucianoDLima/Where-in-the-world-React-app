@@ -1,8 +1,5 @@
 /**
  * Get property from an object within an object
- *
- * @param obj - Target object
- * @param property - Property needed
  */
 function getDeeperProperty<T, K extends keyof T>(
   obj: { [key: string]: T },

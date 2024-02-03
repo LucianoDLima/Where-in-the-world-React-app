@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import ThemeToggle from "../../Controls/ThemeToggle";
 
 /**
@@ -9,12 +8,12 @@ import ThemeToggle from "../../Controls/ThemeToggle";
 function HeaderContent() {
   return (
     <div className="mx-auto flex w-full max-w-screen-xl justify-between px-4">
-      <Link
-        to="./"
+      <a
+        href="./"
         className="text-center text-sm font-semibold md:text-2xl md:font-extrabold"
       >
         Where in the world?
-      </Link>
+      </a>
 
       <ThemeToggle />
     </div>

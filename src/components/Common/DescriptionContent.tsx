@@ -22,7 +22,7 @@ function DescriptionContent({ list }: DescriptionContent) {
           className={`capitalize ${index === list.length - 1 ? "" : "mb-2"}`}
         >
           {item.label}
-          <span className="font-light">{item.value}</span>
+          <span className="font-thin normal-case">{item.value}</span>
         </li>
       ))}
     </ul>

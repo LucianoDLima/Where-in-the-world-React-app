@@ -2,6 +2,7 @@ import FilterWrapper from "../components/Layout/Filter/FilterWrapper";
 import useInitialDataRequest from "../hooks/useInitialDataRequest";
 import CardsContainer from "../components/Layout/Card/CardsContainer";
 import SRH1 from "../components/Common/SRH1";
+import MainWrapper from "../components/Common/MainWrapper";
 
 const HomeBody = () => {
   useInitialDataRequest();
@@ -12,9 +13,9 @@ const HomeBody = () => {
 
       <SRH1 />
 
-      <main className="mx-auto max-w-screen-xl px-4">
+      <MainWrapper>
         <CardsContainer />
-      </main>
+      </MainWrapper>
     </>
   );
 };

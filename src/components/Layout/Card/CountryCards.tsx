@@ -54,7 +54,6 @@ function CountryCards() {
           </DescriptionContainer>
         </li>
       ))}
-      ;
     </>
   );
 }

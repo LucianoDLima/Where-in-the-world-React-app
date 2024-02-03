@@ -5,6 +5,7 @@ import {
   getDeeperProperty,
 } from "../../../hooks/useObjectMaps";
 import { CountriesType } from "../../../types";
+import DetailsBorder from "./DetailsBorder";
 
 type DetailsDescriptionProps = {
   id?: string;
@@ -70,10 +71,14 @@ function DetailsDescription({ id, countries }: DetailsDescriptionProps) {
             },
             {
               label: "Drive side: ",
-              value: country.car.side,
+              value:
+                country.car.side.charAt(0).toUpperCase() +
+                country.car.side.slice(1),
             },
           ]}
         />
+
+        <DetailsBorder data={country} />
       </DescriptionContainer>
     ));
 }

@@ -17,7 +17,7 @@ interface DriveSide {
 }
 
 export type CountriesType = {
-  borders: { [key: string]: string };
+  borders: string[];
   capital: string;
   car: DriveSide;
   continents: string[];
@@ -28,5 +28,6 @@ export type CountriesType = {
   population: string;
   region: string;
   subregion: string;
+  cca3: string;
   tld: string[];
 };
