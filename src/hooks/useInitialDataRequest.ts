@@ -1,20 +1,17 @@
-import { useEffect } from "react";
-import { useCountryDataContext } from "../context/useCountryData";
-import { fetchData } from "../service/fetchData";
-import { useDataStatusContext } from "../context/useDataStatus";
+import { useEffect } from 'react';
+import { useCountryDataContext } from '../context/useCountryData';
+import { fetchData } from '../service/fetchData';
+import { useDataStatusContext } from '../context/useDataStatus';
 
 /**
  * Fetch data during mounting
- *
- * @returns {void}
  */
 export default function useInitialDataRequest(): void {
   const { setCountries } = useCountryDataContext();
   const { status, setStatus } = useDataStatusContext();
 
   useEffect(() => {
-    // Ensures no more requests are made after data has been retrieved
-    // TODO: Need to look up if this is a good way of going about it
+    // Ensure no more requests are made after data has been retrieved
     if (status.isRetrieved) return;
 
     async function fetchDataAndUpdateCountry() {
@@ -26,7 +23,7 @@ export default function useInitialDataRequest(): void {
 
         const data = await fetchData();
 
-        console.log(data.find((country: any) => country.name.common === "Russia"));
+        console.log(data.find((country: any) => country.name.common === 'Russia'));
 
         // Sneaky, I know I know
         await new Promise((resolve) => setTimeout(resolve, 650));
@@ -43,7 +40,7 @@ export default function useInitialDataRequest(): void {
           isRetrieved: true,
         }));
       } catch (error) {
-        console.error("Error fetching data: ", error);
+        console.error('Error fetching data: ', error);
       }
     }
 

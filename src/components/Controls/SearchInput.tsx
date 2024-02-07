@@ -1,5 +1,5 @@
-import { ChangeEvent } from "react";
-import { useDataFilterContext } from "../../context/useDataFilter";
+import { ChangeEvent } from 'react';
+import { useDataFilterContext } from '../../context/useDataFilter';
 
 /**
  * Props for the SearchInput
@@ -33,9 +33,9 @@ function SearchInput({ id }: SearchInputProps) {
 
   return (
     <input
-      type="search"
-      className="w-full rounded-sm bg-primary px-16 py-4 text-xs placeholder:text-inherit md:px-20 md:py-5 md:text-sm"
-      placeholder="Search for a country..."
+      type='search'
+      className='w-full rounded-sm bg-primary px-16 py-4 text-xs placeholder:text-inherit md:px-20 md:py-5 md:text-sm'
+      placeholder='Search for a country...'
       id={id}
       onChange={handleUserInput}
     />

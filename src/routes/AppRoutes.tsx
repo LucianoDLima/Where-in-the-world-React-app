@@ -1,10 +1,10 @@
-import { RouterProvider } from "react-router-dom";
-import { router } from "./routes";
-import { ThemeProvider } from "../context/useTheme";
-import { CountryDataProvider } from "../context/useCountryData";
-import { DataStatusProvider } from "../context/useDataStatus";
-import { DataFilterProvider } from "../context/useDataFilter";
-import Header from "../views/Header";
+import { RouterProvider } from 'react-router-dom';
+import { router } from './routes';
+import { ThemeProvider } from '../context/useTheme';
+import { CountryDataProvider } from '../context/useCountryData';
+import { DataStatusProvider } from '../context/useDataStatus';
+import { DataFilterProvider } from '../context/useDataFilter';
+import Header from '../view/Header';
 
 function AppRoutes() {
   return (

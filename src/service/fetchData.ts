@@ -1,4 +1,4 @@
-const countriesURL = "https://restcountries.com/v3.1/all";
+const countriesURL = 'https://restcountries.com/v3.1/all';
 
 export async function fetchData() {
   try {
@@ -6,9 +6,7 @@ export async function fetchData() {
     const data = await response.json();
 
     if (!response.ok) {
-      throw new Error(
-        `An error occured with the ${response.status} status code`,
-      );
+      throw new Error(`An error occured with the ${response.status} status code`);
     }
 
     return data;

@@ -3,14 +3,7 @@
  * and also check if data has already been retrieved to avoid multiple requests
  */
 
-import {
-  Dispatch,
-  ReactNode,
-  SetStateAction,
-  createContext,
-  useContext,
-  useState,
-} from "react";
+import { Dispatch, ReactNode, SetStateAction, createContext, useContext, useState } from 'react';
 
 /**
  * Interface representing the status of an API request
@@ -51,7 +44,7 @@ export function useDataStatusContext(): DataStatusContextType {
   const context = useContext(DataStatusContext);
 
   if (!context) {
-    throw new Error("useDataStatusContext must be used within a DataStatus");
+    throw new Error('useDataStatusContext must be used within a DataStatus');
   }
   return context;
 }

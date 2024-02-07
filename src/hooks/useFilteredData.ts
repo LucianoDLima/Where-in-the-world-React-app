@@ -1,25 +1,20 @@
-import { useEffect, useState } from "react";
-import { useCountryDataContext } from "../context/useCountryData";
-import { useDataFilterContext } from "../context/useDataFilter";
-import { CountriesType } from "../types";
+import { useEffect, useState } from 'react';
+import { useCountryDataContext } from '../context/useCountryData';
+import { useDataFilterContext } from '../context/useDataFilter';
+import { CountriesType } from '../types';
 
 /**
  * Handle both search and select filters logic
- *
- * @returns {CountriesType[]}
  */
 export default function useFilteredData(): CountriesType[] {
   const { countries } = useCountryDataContext();
   const { filter } = useDataFilterContext();
-  const [filteredCountries, setFilteredCountries] = useState<CountriesType[]>(
-    [],
-  );
+  const [filteredCountries, setFilteredCountries] = useState<CountriesType[]>([]);
 
   useEffect(() => {
     function filterByRegion(country: CountriesType): boolean {
       // Ensures proper loading on mounting and/or if user selects "All" option
-      const allCountries =
-        filter.select === undefined || filter.select === "All";
+      const allCountries = filter.select === undefined || filter.select === 'All';
 
       if (allCountries) {
         return true;
@@ -33,9 +28,7 @@ export default function useFilteredData(): CountriesType[] {
       if (!filter.search) {
         return true;
       }
-      return country.name.common
-        .toLowerCase()
-        .includes(filter.search.toLowerCase());
+      return country.name.common.toLowerCase().includes(filter.search.toLowerCase());
     }
 
     // Filter countries based on both filters above

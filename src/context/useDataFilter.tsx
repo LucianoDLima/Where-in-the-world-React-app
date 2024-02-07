@@ -1,11 +1,4 @@
-import {
-  Dispatch,
-  ReactNode,
-  SetStateAction,
-  createContext,
-  useContext,
-  useState,
-} from "react";
+import { Dispatch, ReactNode, SetStateAction, createContext, useContext, useState } from 'react';
 
 /**
  * Interface with the possible filter states
@@ -46,9 +39,7 @@ export function useDataFilterContext() {
   const context = useContext(DataFilterContext);
 
   if (!context) {
-    throw new Error(
-      "useDataFilterContext must be used withing a DataFilterProvider",
-    );
+    throw new Error('useDataFilterContext must be used withing a DataFilterProvider');
   }
 
   return context;

@@ -2,13 +2,7 @@
  * Handle the theme state
  */
 
-import {
-  useState,
-  useEffect,
-  createContext,
-  useContext,
-  ReactNode,
-} from "react";
+import { useState, useEffect, createContext, useContext, ReactNode } from 'react';
 
 type ThemeContextProps = {
   darkTheme: boolean;
@@ -25,20 +19,17 @@ type ThemeProviderProps = {
 export function ThemeProvider({ children }: ThemeProviderProps): JSX.Element {
   // Check if user prefers dark mode based on their device/browser's settings
   const prefersDarkMode =
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches;
+    window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   const initialTheme =
-    localStorage.getItem("preferredTheme") ||
-    (prefersDarkMode ? "dark" : "light");
+    localStorage.getItem('preferredTheme') || (prefersDarkMode ? 'dark' : 'light');
 
-  const [darkTheme, setDarkTheme] = useState<boolean>(initialTheme === "dark");
+  const [darkTheme, setDarkTheme] = useState<boolean>(initialTheme === 'dark');
 
   // Set the initial theme based on user's device/browser's settings
   useEffect(() => {
     const prefersDarkMode =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const preferredTheme = localStorage.getItem("preferredTheme");
+      window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const preferredTheme = localStorage.getItem('preferredTheme');
 
     if (!preferredTheme) {
       setDarkTheme(prefersDarkMode);
@@ -49,8 +40,8 @@ export function ThemeProvider({ children }: ThemeProviderProps): JSX.Element {
   useEffect(() => {
     const bodyElement = document.body;
 
-    bodyElement.dataset.theme = darkTheme ? "dark" : "light";
-    localStorage.setItem("preferredTheme", darkTheme ? "dark" : "light");
+    bodyElement.dataset.theme = darkTheme ? 'dark' : 'light';
+    localStorage.setItem('preferredTheme', darkTheme ? 'dark' : 'light');
   }, [darkTheme]);
 
   // Switch between dark and light themes.
@@ -64,9 +55,7 @@ export function ThemeProvider({ children }: ThemeProviderProps): JSX.Element {
 
   return (
     <ThemeContext.Provider value={contextValue}>
-      <ThemeUpdateContext.Provider value={toggleTheme}>
-        {children}
-      </ThemeUpdateContext.Provider>
+      <ThemeUpdateContext.Provider value={toggleTheme}>{children}</ThemeUpdateContext.Provider>
     </ThemeContext.Provider>
   );
 }
@@ -75,7 +64,7 @@ export function useTheme(): ThemeContextProps {
   const context = useContext(ThemeContext);
 
   if (!context) {
-    throw new Error("useTheme must be used within a ThemeProvider");
+    throw new Error('useTheme must be used within a ThemeProvider');
   }
 
   return context;
@@ -85,7 +74,7 @@ export function useThemeUpdate(): () => void {
   const context = useContext(ThemeUpdateContext);
 
   if (!context) {
-    throw new Error("useThemeUpdate must be used within a ThemeProvider");
+    throw new Error('useThemeUpdate must be used within a ThemeProvider');
   }
 
   return context;
