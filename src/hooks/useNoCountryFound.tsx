@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { useDataStatusContext } from "../context/useDataStatus";
 import { useCountryDataContext } from "../context/useCountryData";
 
@@ -10,7 +10,9 @@ function useNoCountryFound() {
   const { id } = useParams();
   const { status } = useDataStatusContext();
   const { countries } = useCountryDataContext();
-  const navigate = useNavigate();
+  const [isCountryFound, setIsCountryFound] = useState<boolean | undefined>(
+    undefined,
+  );
 
   useEffect(() => {
     // Ensure it only runs after data has been retrieved
@@ -24,12 +26,14 @@ function useNoCountryFound() {
         (country) => country.name.common.toLowerCase() === id?.toLowerCase(),
       )
     ) {
+      setIsCountryFound(true);
       return;
     }
 
-    // If it doesn't exist, direct user to error page
-    return navigate("../error");
-  }, [id, status.isRetrieved]);
+    setIsCountryFound(false);
+  }, [id, countries, status.isRetrieved]);
+
+  return isCountryFound;
 }
 
 export default useNoCountryFound;

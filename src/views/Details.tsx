@@ -7,6 +7,7 @@ import useNoCountryFound from "../hooks/useNoCountryFound";
 import SRH1 from "../components/Common/SRH1";
 import Button from "../components/Controls/AnchorButton";
 import MainWrapper from "../components/Common/MainWrapper";
+import ErrorPage from "./Error";
 
 const DetailsPage = () => {
   const { id } = useParams();
@@ -15,22 +16,25 @@ const DetailsPage = () => {
   // Will only run here if user refreshes the page or go to this page through the URL
   useInitialDataRequest();
 
-  useNoCountryFound();
+  const countryFound = useNoCountryFound();
 
   return (
     <MainWrapper>
       <SRH1 />
+      {countryFound === undefined ? null : countryFound ? (
+        <div className="flex flex-col text-primary @container">
+          <div className="my-8">
+            <Button hasIcon={true} text="Back" to="../" />
+          </div>
 
-      <div className="flex flex-col text-primary @container">
-        <div className="my-8">
-          <Button hasIcon={true} text="Back" to="../" />
+          <div className="grid gap-x-4 md:grid-cols-2">
+            <DetailsFlag countries={countries} id={id} />
+            <DetailsDescription countries={countries} id={id} />
+          </div>
         </div>
-
-        <div className="grid gap-x-4 md:grid-cols-2">
-          <DetailsFlag countries={countries} id={id} />
-          <DetailsDescription countries={countries} id={id} />
-        </div>
-      </div>
+      ) : (
+        <ErrorPage />
+      )}
     </MainWrapper>
   );
 };
