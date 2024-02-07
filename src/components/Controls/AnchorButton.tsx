@@ -3,17 +3,18 @@ import { Link } from 'react-router-dom';
 import ArrowIcon from '../Icons/ArrowIcon';
 import { ComponentPropsWithoutRef } from 'react';
 
-interface AnchorButtonProps extends ComponentPropsWithoutRef<'svg'> {
+interface AnchorButtonProps extends ComponentPropsWithoutRef<'a'> {
   text: string;
   hasIcon: boolean;
   to: string;
 }
 
-const AnchorButton = ({ text, hasIcon, to }: AnchorButtonProps) => {
+const AnchorButton = ({ text, hasIcon, to, ...props }: AnchorButtonProps) => {
   return (
     <Link
-      to={to}
-      className='flex max-w-24 items-center justify-center gap-2 rounded-md bg-primary px-4 py-2 shadow-foggy'
+    to={to}
+    className='flex max-w-24 items-center justify-center gap-2 rounded-md bg-primary px-4 py-2 shadow-foggy'
+    {...props}
     >
       {hasIcon && <ArrowIcon className='w-5 fill-text-primary' />}
       <p className='text-sm '>{text}</p>
