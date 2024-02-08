@@ -23,8 +23,6 @@ export default function useInitialDataRequest(): void {
 
         const data = await fetchData();
 
-        console.log(data.find((country: any) => country.name.common === 'Russia'));
-
         // Sneaky, I know I know
         await new Promise((resolve) => setTimeout(resolve, 650));
 

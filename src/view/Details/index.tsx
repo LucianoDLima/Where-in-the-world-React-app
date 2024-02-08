@@ -18,22 +18,22 @@ const DetailsPage = () => {
 
   const countryFound = useNoCountryFound();
 
+  if (countryFound === false) {
+    return <ErrorPage />;
+  }
+
   return (
     <MainWrapper>
-      {countryFound === undefined ? null : countryFound ? (
-        <div className='flex flex-col text-primary @container'>
-          <div className='my-8'>
-            <AnchorButton hasIcon={true} text='Back' onClick={() => navigate(-1)} to='' />
-          </div>
-
-          <div className='grid gap-x-4 md:grid-cols-2'>
-            <DetailsFlag countries={countries} id={id} />
-            <DetailsDescription countries={countries} id={id} />
-          </div>
+      <div className='flex flex-col text-primary @container'>
+        <div className='my-8'>
+          <AnchorButton hasIcon={true} text='Back' onClick={() => navigate(-1)} to='' />
         </div>
-      ) : (
-        <ErrorPage />
-      )}
+
+        <div className='grid gap-x-4 md:grid-cols-2'>
+          <DetailsFlag countries={countries} id={id} />
+          <DetailsDescription countries={countries} id={id} />
+        </div>
+      </div>
     </MainWrapper>
   );
 };
