@@ -31,7 +31,7 @@ function DetailsDescription({ id, countries }: DetailsDescriptionProps) {
       ];
 
       return (
-        <div key={index} className='mx-auto max-w-[28rem] pb-10 pt-6 text-2xl md:text-3xl'>
+        <div key={index} className='mx-auto max-w-[28rem] w-full pb-10 pt-6 text-2xl md:text-3xl'>
           <h1 className='mb-4 font-semibold'>{country.name.common}</h1>
 
           <List className='grid gap-1 text-sm font-semibold @[28rem]:grid-cols-2 @[40rem]:gap-x-2'>
