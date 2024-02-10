@@ -1,7 +1,7 @@
 import CardFlag from './CardFlag';
 import { CountriesType } from '../../../types';
-import { useNavigate } from 'react-router-dom';
-import { Fragment, KeyboardEvent } from 'react';
+import { Link } from 'react-router-dom';
+import { Fragment } from 'react';
 import useFilteredData from '../../../hooks/useFilteredData';
 import List from '../../../components/Common/List';
 
@@ -10,16 +10,6 @@ import List from '../../../components/Common/List';
  */
 function CountryCards() {
   const filteredCountries = useFilteredData();
-  const navigate = useNavigate();
-
-  // Handle key press if user is navigating with a keyboard
-  function goToDetailsPage(to: string) {
-    return function handleKeyPress(e: KeyboardEvent<HTMLLIElement>) {
-      const enterKey = e.key === 'Enter';
-
-      if (enterKey) navigate(to);
-    };
-  }
 
   return filteredCountries.map((data: CountriesType, index: number) => {
     const countryDetails = [
@@ -30,16 +20,18 @@ function CountryCards() {
 
     return (
       <li
-        tabIndex={0}
         key={index}
-        role='link'
-        className='flex w-full min-w-[16.5rem] max-w-72 flex-col overflow-hidden rounded-md bg-primary text-primary shadow-foggy md:max-w-64'
-        onKeyUp={goToDetailsPage(data.name.common)}
+        className='relative flex w-full min-w-[16.5rem] max-w-72 flex-col overflow-hidden rounded-md bg-primary text-primary shadow-foggy focus-within:outline md:max-w-64'
       >
         <CardFlag country={data.name.common} flag={data.flags.svg} />
 
         <div className='px-6 pb-10 pt-6'>
-          <h2 className='mb-4 text-lg font-semibold'>{data.name.common}</h2>
+          <Link
+            to={data.name.common}
+            className='mb-4 inline-block text-lg font-semibold after:absolute after:left-0 after:right-0 after:top-0 after:h-40 hover:underline focus:outline-none'
+          >
+            <h2>{data.name.common}</h2>
+          </Link>
 
           <List className='flex flex-col gap-1 text-sm font-semibold'>
             {countryDetails.map((item, i) => (

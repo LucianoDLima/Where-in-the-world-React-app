@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 /**
  * Props for the CardFlag component
  *
@@ -17,9 +15,9 @@ type CardFlagType = {
  */
 function CardFlag({ flag, country }: CardFlagType) {
   return (
-    <Link tabIndex={-1} className='h-40' to={country}>
+    <div className='h-40'>
       <img className='h-full w-full object-cover' src={flag} alt={`${country} flag`} />
-    </Link>
+    </div>
   );
 }
 
